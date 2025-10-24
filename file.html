@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starlight Diner</title>
+  <style>
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      background-color: #fdf8f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffcc70;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 3px solid #ff9a3c;
+    }
+
+    #header-img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    article {
+      background-color: #fffaf3;
+      border: 1px solid #f2c57c;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    article img {
+      width: 200px;
+      border-radius: 8px;
+    }
+
+    h1, h2, h3 {
+      color: #e05d5d;
+    }
+
+    form {
+      background-color: #fffaf3;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #f2c57c;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 8px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: #ff9a3c;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      width: auto;
+      padding: 10px 20px;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ffcc70;
+      padding: 10px;
+      border-top: 3px solid #ff9a3c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Stylized_Coffee_Cup.svg" alt="Starlight Diner Logo">
+    <h1>Starlight Diner</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#order-form">Order Form</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="menu">
+      <h2>Menu</h2>
+
+      <article>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Stack_of_pancakes.jpg" alt="Galaxy Pancakes">
+        <h3>Galaxy Pancakes</h3>
+        <p>Fluffy pancakes topped with blueberries and whipped cream, drizzled with starry syrup. <i>$9.99</i></p>
+      </article>
+
+      <article>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Classic_burger.jpg" alt="Cosmic Burger">
+        <h3>Cosmic Burger</h3>
+        <p>A juicy beef patty with cheddar, lettuce, and cosmic sauce on a toasted brioche bun. <i>$12.49</i></p>
+      </article>
+
+      <article>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Caesar_salad_%282%29.jpg" alt="Starlight Salad">
+        <h3>Starlight Salad</h3>
+        <p>Crisp romaine with parmesan, garlic croutons, and a light caesar dressing. <i>$8.75</i></p>
+      </article>
+    </section>
+
+    <section id="order-form">
+      <h2>Place Your Order</h2>
+      <form>
+        <label for="pancakes">Galaxy Pancakes (Qty):</label>
+        <input type="number" id="pancakes" name="pancakes" min="0" value="0">
+
+        <label for="burger">Cosmic Burger (Qty):</label>
+        <input type="number" id="burger" name="burger" min="0" value="0">
+
+        <label for="salad">Starlight Salad (Qty):</label>
+        <input type="number" id="salad" name="salad" min="0" value="0">
+
+        <h3>Sides & Add-ons</h3>
+        <label><input type="checkbox" name="side" value="fries"> Extra Fries (+$2.50)</label>
+        <label><input type="checkbox" name="side" value="shake"> Chocolate Shake (+$3.00)</label>
+        <label><input type="checkbox" name="side" value="bacon"> Add Bacon (+$1.50)</label>
+
+        <h3>Dining Option</h3>
+        <label><input type="radio" name="dining" value="dine-in" required> Dine-In</label>
+        <label><input type="radio" name="dining" value="takeout"> Takeout</label>
+
+        <label for="requests">Special Requests:</label>
+        <textarea id="requests" name="requests" rows="4" placeholder="Add any customizations or notes here..."></textarea>
+
+        <input type="submit" value="Go To Checkout">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with love by <strong>codex_chef42</strong></p>
+  </footer>
+</body>
+</html>
